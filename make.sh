@@ -39,12 +39,12 @@ fi
 
 echo "-------------------------------------------------------------------------------"
 echo "### COMPILLING SCRIPT ###"
-../script/msc "$PROJECT_NAME.spt" ../script/msc.h $COUNT_SCREEN
-cp ../script/*.h ./
+./bin/msc "$PROJECT_NAME.spt" ./bin/msc.h $COUNT_SCREEN
+cp ./bin/*.h ./dev/
 echo "-------------------------------------------------------------------------------"
 echo "### REGENERANDO MAP ###"
-../utils/mapcnv ../source/"$PROJECT_NAME.map" $WIDTH_MAP $HEIGH_MAP 15 10 15 packed
-cp ../utils/mapa.h ./
+../bin/mapcnv ./source/"$PROJECT_NAME.map" $WIDTH_MAP $HEIGH_MAP 15 10 15 packed
+cp ./source/"$PROJECT_NAME.h" ./dev/
 echo "-------------------------------------------------------------------------------"
 echo "### COMPILANDO GUEGO ###"
 #zcc +zx -vn "$PROJECT_NAME.c" -o "$PROJECT_NAME.bin" -lndos -lsplib2 -zorg=24200
